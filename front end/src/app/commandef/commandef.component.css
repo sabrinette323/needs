@@ -1,0 +1,14 @@
+body{
+  
+    background: linear-gradient(to bottom,#dfc3d8,rgb(197, 189, 216));
+}
+label {
+    color :rgb(156, 40, 156);
+}
+button {
+    background-color: rgb(139, 10, 139);
+    
+}
+button:hover {
+    background-color:  rgb(235, 91, 235);
+}

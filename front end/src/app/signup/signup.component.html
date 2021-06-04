@@ -1,0 +1,108 @@
+<body>
+
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
+        <div class="signup">
+            <form [formGroup]="signupForm" class="user" (ngSubmit)="signupUser()">
+                <label style="margin-left: 10px;" for="chk" aria-hidden="true">Créez votre compte </label>
+                <div class="form-group row">
+                    <div class=" mb-3 mb-sm-0">
+                        <div class="pp"><input formControlName="prenom" class="form-control " id="examplePrenom"
+                                type="text" size="26" class="fai" name="prenom" placeholder="Prénom" required=""></div>
+                        <div *ngIf="prenom.touched && prenom.invalid" class="text-danger">
+                            <div *ngIf="prenom.errors.required">
+                                <small>* Le prénom est obligatoire</small>
+                            </div>
+                            <div *ngIf="prenom.errors.minlength">
+                                <small>* Le prénom doit avoir au moins deux caractères</small>
+                            </div>
+                            <div *ngIf="prenom.errors.pattern">
+                                <small>* Le prénom est invalide</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" mb-3 mb-sm-0">
+                        <div class="pp"><input formControlName="nom" class="form-control " id="exampleNom" type="text"
+                                size="26" class="fais" name="nom" placeholder="Nom" required=""></div>
+                        <div *ngIf="nom.touched && nom.invalid" class="text-danger">
+                            <div *ngIf="nom.errors.required">
+                                <small>* Le nom est obligatoire</small>
+                            </div>
+                            <div *ngIf="nom.errors.minlength">
+                                <small>* Le nom doit avoir au moins deux caractères</small>
+                            </div>
+                            <div *ngIf="nom.errors.pattern">
+                                <small>* Le nom est invalide</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-10   mb-3 mb-sm-0">
+
+                        <input formControlName="email" class="form-control" id="exampleEmail" type="email" size="60"
+                            name="email" placeholder="Votre Adresse Email " required="">
+                        <div *ngIf="email.touched && email.invalid" class="text-danger">
+                            <div *ngIf="email.errors.required">
+                                <small>* L'adresse email est obligatoire</small>
+                            </div>
+                            <div *ngIf="email.errors.pattern">
+                                <small>* L'adresse email est invalide</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="mb-3 mb-sm-0">
+                        <div class="pp"><input formControlName="password" class="form-control" id="examplePassword"
+                                type="Password" size="26" class="fai" name="password" placeholder="Mot de passe"
+                                required=""></div>
+                        <div *ngIf="password.touched && password.invalid" class="text-danger">
+                            <div *ngIf="password.errors.required">
+                                <small>* Le mot de passe est obligatoire</small>
+                            </div>
+                            <div *ngIf="password.errors.pattern">
+                                <small>* Le mot de passe est invalide</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" mb-3 mb-sm-0">
+                        <div class="pp"><input formControlName="repassword" class="form-control" id="exampleRepassword"
+                                type="Password" size="26" class="fais" name="repassword"
+                                placeholder="Répéter mot de passe" required=""></div>
+                        <div *ngIf="repassword.touched && repassword.invalid" class="text-danger">
+                            <div *ngIf="repassword.errors.required">
+                                <small>* Champ obligatoire</small>
+                            </div>
+                            <div *ngIf="password.errors.pattern">
+                                <small>* Champ invalide</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <div class="col-sm-10 mb-3 mb-sm-0">
+                        <input formControlName="numero" class="form-control" id="exampleEnt" type="text" size="60"
+                            name="numero" placeholder="Votre Numéro Téléphone" required="">
+                        <div *ngIf="numero.touched && numero.invalid" class="text-danger">
+                            <div *ngIf="numero.errors.required">
+                                <small>* Le Numéro de Téléphone est obligatoire</small>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <button (click)="signupUser()" style="margin-left:175px;margin-top: -0.1px;"
+                            [disabled]="signupForm.invalid" type="button">Crée Un Compte</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>

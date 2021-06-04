@@ -1,0 +1,118 @@
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+    <!-- Sidebar -->
+
+    <!-- End of Sidebar -->
+
+
+
+    <header id="header">
+        <div class="container d-flex">
+            <div class="logo mr-auto">
+                <h1 class="text-light"><a href="index.html" style="font-style: italic; align-content: center;">Détails
+                        De Produit </a></h1>
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+            </div>
+        </div>
+    </header><!-- End Header -->
+
+
+
+
+
+    <div class="card" style="width: 95.5rem;height:100px;padding-top:18px;padding-left:20px; border-color: white;">
+        <div>
+            <div _ngcontent-qfv-c21="" class="p-2 ">
+                <!---->
+                <!---->
+                <div style="margin-left: 20px;" _ngcontent-qfv-c21="" class="ng-star-inserted"><img
+                        style="width: 8%;margin-top: -15px;" _ngcontent-qfv-c21=""
+                        class="sm-avatar img-thumbnail rounded-circle" [src]="produit.image"> </div>
+            </div>
+            <div style="margin-left: 180px;margin-top: -88px;" _ngcontent-qfv-c21="" class="p-2 align-self-center">
+                <p _ngcontent-qfv-c21="" class="text-success h4">{{produit.nom}}</p>
+                <p _ngcontent-qfv-c21="" class="small" style="color: black;">P-000{{produit.reference}}</p>
+            </div>
+            <div _ngcontent-qfv-c21="" class="p-2 ml-auto align-self-center">
+                <!---->
+
+            </div>
+            <div _ngcontent-qfv-c21="" class="p-2 h3 align-self-center"><i _ngcontent-qfv-c21=""
+                    class="fa fa-pencil-square-o cursor-pointer text-success"></i></div>
+        </div>
+    </div>
+    <br>
+
+    <!-- Content Row -->
+
+    <div class="row">
+
+        <!-- Area Chart -->
+        <div class="col">
+            <div class="card shadow mb-4">
+
+                <!-- Card Body -->
+
+                <div class="card-body" style="padding:40px;">
+
+
+
+                    <div _ngcontent-qfv-c22="" class="form-row pt-4 p-3">
+                        <div _ngcontent-qfv-c22="" class="form-group col-md col-sm-6">
+                            <p _ngcontent-qfv-c22="" class="text-secondary">Catégorie</p>
+                            <!---->
+
+                            <div _ngcontent-qfv-c22="" class="ng-star-inserted">
+                                <p _ngcontent-qfv-c22="" class="company-address" style="color: black;">
+                                    {{produit.categorie}}</p>
+                            </div>
+                        </div>
+                        <!---->
+                        <!---->
+                        <div _ngcontent-qfv-c22="" class="form-group col-md col-sm-6">
+                            <p _ngcontent-qfv-c22="" class="text-secondary"> RÉFÉRENCE  </p>
+                            <div _ngcontent-qfv-c22="">
+                                <p _ngcontent-qfv-c22="" style="color: black;" class="company-address">
+                                    {{produit.reference}}</p>
+                            </div>
+                        </div>
+                        <div _ngcontent-qfv-c22="" class="form-group col-md col-sm-6"><span _ngcontent-qfv-c22=""
+                                class="text-secondary">Description</span>
+                            <div _ngcontent-qfv-c22="" class="textarea-size ng-untouched ng-pristine" id="description">
+                                <!---->
+                                <div class="ck-blurred ck ck-content ck-editor__editable ck-rounded-corners ck-editor__editable_inline ck-read-only"
+                                    lang="en" dir="ltr" role="textbox" aria-label="Éditeur de texte enrichi, main"
+                                    contenteditable="false">
+                                    <p style="color: black;"><br data-cke-filler="true">{{produit.description}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr _ngcontent-qfv-c22="">
+                    <div _ngcontent-qfv-c22="" class="form-row">
+                        <div _ngcontent-qfv-c22="" class="form-group text-center col-md-3 col-sm-6">
+                            <p _ngcontent-qfv-c22="" class="text-secondary"> PRIX PUBLIC </p>
+                            <div _ngcontent-qfv-c22="">
+                                <p _ngcontent-qfv-c22="" class="h4 text-success">{{produit.prix}} TND
+                                    </p>
+                            </div>
+                        </div>
+                        <!---->
+                    </div>
+
+
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+<!-- /.container-fluid -->

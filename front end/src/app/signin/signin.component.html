@@ -1,0 +1,63 @@
+<body>
+    <div class="main">
+        
+            <form [formGroup]="signinForm" class="user" (ngSubmit)="signinUser()">
+                <label style="margin-left: 40px;" for="chk" aria-hidden="true">Connexion </label>
+                <div class="form-group row">
+                    <div class="col-sm-12 mb-3 mb-sm-0">
+                        <input formControlName="emailsignin" class="form-control" id="exampleEmail" type="email"
+                            name="email2" placeholder="Adresse Email" required="">
+                            <div *ngIf="emailsignin.touched && emailsignin.invalid" class="text-danger">
+                                <div *ngIf="emailsignin.errors.required">
+                                    <small style="padding-left:109px;">* L'adresse email est obligatoire</small>
+                                </div>
+                                <div *ngIf="emailsignin.errors.pattern">
+                                    <small style="padding-left:109px;">* L'adresse email est invalide</small>
+                                </div>
+                            </div>
+                            
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-12 mb-3 mb-sm-0">
+                        <input  formControlName="passwordsignin" class="form-control" id="examplePassword" type="Password"
+                            name="pswd" placeholder="Mot de passe" required="">
+                            <div *ngIf="passwordsignin.touched && passwordsignin.invalid" class="text-danger">
+                                <div *ngIf="passwordsignin.errors.required">
+                                    <small style="padding-left:109px;">* Le mot de passe est obligatoire</small>
+                                </div>
+                                <div *ngIf="passwordsignin.errors.pattern">
+                                    <small style="padding-left:109px;">* Le mot de passe est invalide</small>
+                                </div>
+                            </div>
+                            
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="custom-control custom-checkbox small">
+                        <input type="checkbox" class="custom-control-input" id="customCheck">
+                        <span class="custom-control-label" for="customCheck">Se souvenir de moi</span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-12 mb-3 mb-sm-0">
+                        <button (click)="signinUser()"  style="margin-top: -3px;"   type="submit">Connecter</button>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a routerLink="/password" style="margin-right: 30px;">Mot de passe oublié ?</a>
+                </div><br>
+                <div class="text-center">
+                    <a routerLink="/signup" style="margin-right: 30px;">je veux m'inscrire</a>
+                </div>
+            </form>
+            
+       
+
+
+
+
+
+
+    </div>
+</body>
