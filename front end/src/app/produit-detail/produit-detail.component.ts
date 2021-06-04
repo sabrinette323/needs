@@ -24,6 +24,9 @@ export class ProduitDetailComponent implements OnInit {
   ngOnInit(): void {
     this.produitsUser();
   }
+  test(){
+    
+  }
   produitsUser() {
     let idProduit =this.route.snapshot.params.id;
     console.log(idProduit);
